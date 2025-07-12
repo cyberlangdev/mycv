@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="projectsPageTitle">المشاريع - وهيب مهيوب علي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #0c09bc;
+            --primary-color-hover: #0F766E;
+            --body-bg: #0F172A;
+            --section-bg: #1E293B;
+            --card-bg: #334155;
+            --text-light: #F1F5F9;
+            --text-medium: #94A3B8;
+            --text-darker: #64748B;
+            --border-color: #334155;
+            --border-color-light: #475569;
+        }
+        body {
+            font-family: "Tajawal", sans-serif;
+            background-color: var(--body-bg);
+            color: var(--text-medium);
+        }
+        .icon-wave {
+            position: relative;
+            display: inline-block;
+            animation: pulse-wave 3s infinite ease-in-out;
+        }
+        @keyframes pulse-wave {
+            0% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 0px var(--primary-color));
+            }
+            50% {
+                transform: scale(1.05); /* Slight increase for visual effect */
+                filter: drop-shadow(0 0 8px var(--primary-color));
+            }
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 0px var(--primary-color));
+            }
+        }
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px; /* Full pill shape */
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 600; /* font-semibold */
+            text-transform: uppercase;
+        }
+        .status-completed {
+            background-color: #22c55e; /* green-500 */
+            color: white;
+        }
+        .status-in-progress {
+            background-color: #f59e0b; /* amber-500 */
+            color: white;
+        }
+        .status-planned {
+            background-color: #3b82f6; /* blue-500 */
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-[var(--body-bg)] text-[var(--text-medium)] p-4 sm:p-8">
+    <div class="max-w-7xl mx-auto">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[var(--border-color)] bg-[var(--section-bg)] px-4 md:px-10 py-4 shadow-md rounded-lg mb-8">
+            <a href="index.html" class="inline-flex items-center text-[var(--primary-color)] hover:text-[var(--primary-color-hover)] text-sm font-medium leading-normal transition-colors group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 group-hover:-translate-x-1 transition-transform">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <span data-translate="backToCv">العودة إلى السيرة الذاتية</span>
+            </a>
+            <h1 class="text-[var(--text-light)] text-xl font-bold leading-tight tracking-[-0.015em]" data-translate="projectsPageHeader">المشاريع</h1>
+            <div class="flex items-center gap-1.5 sm:gap-2 md:gap-2.5">
+                <button id="lang-ar" class="lang-button p-1 rounded border border-[var(--border-color)] hover:bg-[var(--border-color)] transition-colors" data-lang="ar" aria-label="Arabic Language">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/24px-Flag_of_Yemen.svg.png" alt="علم اليمن" class="w-6 h-4 rounded-sm object-cover" />
+                </button>
+                <button id="lang-en" class="lang-button p-1 rounded border border-[var(--border-color)] hover:bg-[var(--border-color)] transition-colors" data-lang="en" aria-label="English Language">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/24px-Flag_of_the_United_States.svg.png" alt="USA Flag" class="w-6 h-4 rounded-sm object-cover" />
+                </button>
+            </div>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="flex flex-col p-6 bg-[var(--card-bg)] rounded-lg border border-[var(--border-color-light)] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-xl font-semibold text-[var(--text-light)] leading-tight" data-translate="project1TitleFull">AI-Based Phishing Email Detection</h2>
+                    <span class="status-badge status-completed" data-translate="statusCompleted">Completed</span>
+                </div>
+                <p class="text-[var(--text-medium)] text-sm mb-4 leading-relaxed" data-translate="project1Description">Developed an intelligent system using machine learning algorithms to detect and classify phishing emails with 95% accuracy. The system analyzes email content, sender reputation, and URL patterns to identify potential threats.</p>
+                <div class="mb-4">
+                    <h3 class="text-sm font-semibold text-[var(--text-light)] mb-2" data-translate="technologiesUsed">Technologies</h3>
+                    <p class="text-[var(--text-medium)] text-sm flex flex-wrap gap-2">
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Python</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">TensorFlow</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Scikit-learn</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Natural Language Processing</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Flask</span>
+                    </p>
+                </div>
+                <div class="flex items-center justify-between text-xs text-[var(--text-darker)] mb-6">
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span data-translate="durationMonths">4 months</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span data-translate="developersCount">2 developers</span>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-auto">
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors bg-[var(--primary-color)] text-white hover:bg-[var(--primary-color-hover)] icon-wave">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        <span data-translate="viewProjectLink">View Project</span>
+                    </a>
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors border border-[var(--border-color-light)] text-[var(--text-light)] hover:bg-[var(--border-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                        <span data-translate="viewCodeLink">View Code</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col p-6 bg-[var(--card-bg)] rounded-lg border border-[var(--border-color-light)] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-xl font-semibold text-[var(--text-light)] leading-tight" data-translate="project2TitleFull">FTP Vulnerability Exploitation</h2>
+                    <span class="status-badge status-completed" data-translate="statusCompleted">Completed</span>
+                </div>
+                <p class="text-[var(--text-medium)] text-sm mb-4 leading-relaxed" data-translate="project2Description">Created a penetration testing tool to identify and exploit common FTP vulnerabilities including anonymous access, weak credentials, and directory traversal attacks. Used for educational and authorized security testing purposes.</p>
+                <div class="mb-4">
+                    <h3 class="text-sm font-semibold text-[var(--text-light)] mb-2" data-translate="technologiesUsed">Technologies</h3>
+                    <p class="text-[var(--text-medium)] text-sm flex flex-wrap gap-2">
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Python</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Socket Programming</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Nmap</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Metasploit</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Kali Linux</span>
+                    </p>
+                </div>
+                <div class="flex items-center justify-between text-xs text-[var(--text-darker)] mb-6">
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span data-translate="durationMonthsShort">2 months</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span data-translate="developersCountShort">1 developer</span>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-auto">
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors bg-[var(--primary-color)] text-white hover:bg-[var(--primary-color-hover)] icon-wave">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        <span data-translate="viewProjectLink">View Project</span>
+                    </a>
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors border border-[var(--border-color-light)] text-[var(--text-light)] hover:bg-[var(--border-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                        <span data-translate="viewCodeLink">View Code</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col p-6 bg-[var(--card-bg)] rounded-lg border border-[var(--border-color-light)] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-xl font-semibold text-[var(--text-light)] leading-tight" data-translate="project3TitleFull">Network Traffic Analyzer</h2>
+                    <span class="status-badge status-in-progress" data-translate="statusInProgress">In Progress</span>
+                </div>
+                <p class="text-[var(--text-medium)] text-sm mb-4 leading-relaxed" data-translate="project3Description">Built a real-time network traffic monitoring and analysis tool using Wireshark and Python. Provides detailed insights into network protocols, bandwidth usage, and potential security threats with interactive dashboards.</p>
+                <div class="mb-4">
+                    <h3 class="text-sm font-semibold text-[var(--text-light)] mb-2" data-translate="technologiesUsed">Technologies</h3>
+                    <p class="text-[var(--text-medium)] text-sm flex flex-wrap gap-2">
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Python</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Wireshark</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Scapy</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">React</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">D3.js</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">WebSocket</span>
+                    </p>
+                </div>
+                <div class="flex items-center justify-between text-xs text-[var(--text-darker)] mb-6">
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span data-translate="durationMonthsShort">3 months</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span data-translate="developersCount">3 developers</span>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-auto">
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors bg-[var(--primary-color)] text-white hover:bg-[var(--primary-color-hover)] icon-wave">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        <span data-translate="viewProjectLink">View Project</span>
+                    </a>
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors border border-[var(--border-color-light)] text-[var(--text-light)] hover:bg-[var(--border-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                        <span data-translate="viewCodeLink">View Code</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col p-6 bg-[var(--card-bg)] rounded-lg border border-[var(--border-color-light)] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-xl font-semibold text-[var(--text-light)] leading-tight" data-translate="project4TitleFull">Secure Chat Application</h2>
+                    <span class="status-badge status-in-progress" data-translate="statusInProgress">In Progress</span>
+                </div>
+                <p class="text-[var(--text-medium)] text-sm mb-4 leading-relaxed" data-translate="project4Description">Developing an end-to-end encrypted chat application with advanced security features including perfect forward secrecy, message authentication, and secure key exchange protocols.</p>
+                <div class="mb-4">
+                    <h3 class="text-sm font-semibold text-[var(--text-light)] mb-2" data-translate="technologiesUsed">Technologies</h3>
+                    <p class="text-[var(--text-medium)] text-sm flex flex-wrap gap-2">
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Python</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Flask</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">WebSocket</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Cryptography</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">React Native</span>
+                    </p>
+                </div>
+                <div class="flex items-center justify-between text-xs text-[var(--text-darker)] mb-6">
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span data-translate="durationMonthsShort">5 months</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span data-translate="developersCountShort">2 developers</span>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-auto">
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors bg-[var(--primary-color)] text-white hover:bg-[var(--primary-color-hover)] icon-wave">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        <span data-translate="viewProjectLink">View Project</span>
+                    </a>
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors border border-[var(--border-color-light)] text-[var(--text-light)] hover:bg-[var(--border-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                        <span data-translate="viewCodeLink">View Code</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col p-6 bg-[var(--card-bg)] rounded-lg border border-[var(--border-color-light)] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-xl font-semibold text-[var(--text-light)] leading-tight" data-translate="project5TitleFull">Blockchain-based Identity Management</h2>
+                    <span class="status-badge status-planned" data-translate="statusPlanned">Planned</span>
+                </div>
+                <p class="text-[var(--text-medium)] text-sm mb-4 leading-relaxed" data-translate="project5Description">Designing a decentralized identity management system using blockchain technology to provide secure, privacy-preserving digital identity verification without relying on centralized authorities.</p>
+                <div class="mb-4">
+                    <h3 class="text-sm font-semibold text-[var(--text-light)] mb-2" data-translate="technologiesUsed">Technologies</h3>
+                    <p class="text-[var(--text-medium)] text-sm flex flex-wrap gap-2">
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Solidity</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Ethereum</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">IPFS</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Node.js</span>
+                    </p>
+                </div>
+                <div class="flex items-center justify-between text-xs text-[var(--text-darker)] mb-6">
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span data-translate="durationMonthsShort">6 months</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span data-translate="developersCountShort">3 developers</span>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-auto">
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors bg-[var(--primary-color)] text-white hover:bg-[var(--primary-color-hover)] icon-wave">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        <span data-translate="viewProjectLink">View Project</span>
+                    </a>
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors border border-[var(--border-color-light)] text-[var(--text-light)] hover:bg-[var(--border-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                        <span data-translate="viewCodeLink">View Code</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col p-6 bg-[var(--card-bg)] rounded-lg border border-[var(--border-color-light)] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-xl font-semibold text-[var(--text-light)] leading-tight" data-translate="project6TitleFull">IoT Security Framework</h2>
+                    <span class="status-badge status-planned" data-translate="statusPlanned">Planned</span>
+                </div>
+                <p class="text-[var(--text-medium)] text-sm mb-4 leading-relaxed" data-translate="project6Description">Creating a comprehensive security framework for IoT devices including device authentication, secure communication protocols, and anomaly detection to protect against cyber attacks.</p>
+                <div class="mb-4">
+                    <h3 class="text-sm font-semibold text-[var(--text-light)] mb-2" data-translate="technologiesUsed">Technologies</h3>
+                    <p class="text-[var(--text-medium)] text-sm flex flex-wrap gap-2">
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Embedded C</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">MQTT</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Machine Learning</span>
+                        <span class="bg-[var(--border-color)] px-2 py-0.5 rounded-md text-xs font-medium">Cloud Platforms</span>
+                    </p>
+                </div>
+                <div class="flex items-center justify-between text-xs text-[var(--text-darker)] mb-6">
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span data-translate="durationMonthsShort">7 months</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span data-translate="developersCountShort">4 developers</span>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-auto">
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors bg-[var(--primary-color)] text-white hover:bg-[var(--primary-color-hover)] icon-wave">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        <span data-translate="viewProjectLink">View Project</span>
+                    </a>
+                    <a href="#" class="flex-1 inline-flex items-center justify-center rounded-md py-2 text-sm font-medium transition-colors border border-[var(--border-color-light)] text-[var(--text-light)] hover:bg-[var(--border-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                        <span data-translate="viewCodeLink">View Code</span>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlTag = document.documentElement;
+            const langButtons = document.querySelectorAll('.lang-button');
+            let currentLanguage = localStorage.getItem('language') || 'ar'; // Default to Arabic
+
+            async function loadTranslations(lang) {
+                try {
+                    const response = await fetch(`${lang}.json?v=${new Date().getTime()}`);
+                    if (!response.ok) {
+                        console.error(`Could not load ${lang}.json: ${response.statusText}`);
+                        if (lang !== 'en') {
+                            return await loadTranslations('en'); // Fallback to English
+                        }
+                        return null;
+                    }
+                    return await response.json();
+                } catch (error) {
+                    console.error(`Error fetching ${lang}.json:`, error);
+                    if (lang !== 'en') {
+                        return await loadTranslations('en'); // Fallback to English
+                    }
+                    return null;
+                }
+            }
+
+            function setActiveButton(lang) {
+                langButtons.forEach(button => {
+                    if (button.dataset.lang === lang) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            }
+
+            async function applyTranslations(lang) {
+                const translations = await loadTranslations(lang);
+                if (!translations) {
+                    console.error("No translations loaded, defaulting to on-page text.");
+                    setActiveButton(currentLanguage);
+                    htmlTag.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+                    htmlTag.setAttribute('lang', lang);
+                    return;
+                }
+
+                document.querySelectorAll('[data-translate]').forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[key] !== undefined) {
+                        if (element.tagName === 'TITLE') {
+                            document.title = translations[key];
+                        } else if (element.hasAttribute('placeholder')) {
+                            element.setAttribute('placeholder', translations[key]);
+                        } else {
+                            element.innerHTML = translations[key];
+                        }
+                    } else {
+                        console.warn(`Translation key "${key}" not found in ${lang}.json for element:`, element);
+                    }
+                });
+
+                htmlTag.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+                htmlTag.setAttribute('lang', lang);
+                localStorage.setItem('language', lang);
+                currentLanguage = lang;
+                setActiveButton(lang);
+            }
+
+            langButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const selectedLang = event.currentTarget.dataset.lang;
+                    if (selectedLang !== currentLanguage) {
+                        applyTranslations(selectedLang);
+                    }
+                });
+            });
+
+            applyTranslations(currentLanguage);
+        });
+    </script>
+</body>
+</html>
