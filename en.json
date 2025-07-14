@@ -97,8 +97,8 @@
   "project1Description": "An advanced Integrated Development Environment (IDE) combining a powerful file manager, a smart code editor, and an AI assistant powered by Google Gemini. It aims to enhance productivity by providing intelligent code assistance, real-time file management, and an integrated system terminal.",
 
    
-    "project2TitleFull": "FTP Vulnerability Exploitation",
-    "project2Description": "Created a penetration testing tool to identify and exploit common FTP vulnerabilities including anonymous access, weak credentials, and directory traversal attacks. Used for educational and authorized security testing purposes.",
+    "project2TitleFull": "WiFi Hacking Tool",
+  "project2Description": "WiFi Hacking Tool is a powerful Python-based tool designed for ethical hacking and network analysis. It provides a user-friendly interface to capture handshakes, crack passwords, analyze network traffic, and perform various network attacks.",
     "project3TitleFull": "Network Traffic Analyzer",
     "project3Description": "Built a real-time network traffic monitoring and analysis tool using Wireshark and Python. Provides detailed insights into network protocols, bandwidth usage, and potential security threats with interactive dashboards.",
     "project4TitleFull": "Secure Chat Application",
