@@ -93,8 +93,10 @@
     "projectsPageTitle": "Projects - Waheeb Mahyoob Ali","moreProjectsButton": "More Projects",
     "projectsPageHeader": "All Projects",
     "backToCv": "Back to CV",
-    "project1TitleFull": "AI-Based Phishing Email Detection",
-    "project1Description": "Developed an intelligent system using machine learning algorithms to detect and classify phishing emails with 95% accuracy. The system analyzes email content, sender reputation, and URL patterns to identify potential threats.",
+   "project1TitleFull": "AI Waheeb Pro: Smart Programming Assistant",
+  "project1Description": "An advanced Integrated Development Environment (IDE) combining a powerful file manager, a smart code editor, and an AI assistant powered by Google Gemini. It aims to enhance productivity by providing intelligent code assistance, real-time file management, and an integrated system terminal.",
+
+   
     "project2TitleFull": "FTP Vulnerability Exploitation",
     "project2Description": "Created a penetration testing tool to identify and exploit common FTP vulnerabilities including anonymous access, weak credentials, and directory traversal attacks. Used for educational and authorized security testing purposes.",
     "project3TitleFull": "Network Traffic Analyzer",
